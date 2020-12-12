@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "499931671515",
+    "firebase_url": "https://agrolens.firebaseio.com",
+    "project_id": "agrolens",
+    "storage_bucket": "agrolens.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499931671515:android:01e1635b9815fb22f115fe",
+        "android_client_info": {
+          "package_name": "com.example.agro_lens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499931671515-10rpdv8104dk9nu2jm82f3rk2f9qtofc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.agro_lens",
+            "certificate_hash": "a428fc923f42302f1000ca296d4b16918e4fa8ce"
+          }
+        },
+        {
+          "client_id": "499931671515-elrds11n2t2cjptns87vnml25hsnhh12.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEoEn-W6cpsMyoisfzul8pV_mxOWbGp_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499931671515-elrds11n2t2cjptns87vnml25hsnhh12.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

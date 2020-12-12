@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp"
+    android:layout_margin="2dp"
+    app:contentPadding="2dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="5dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:id="@+id/crop_image_history"
+            android:scaleType="centerCrop"
+            android:elevation="4dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+
+            android:src="@drawable/logobg"
+            android:layout_height="120dp">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lineartext"
+            android:gravity="left"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/crop_image_history"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/crop_name_history"
+                android:layout_marginLeft="10dp"
+                android:text="@string/wheat"
+                android:layout_gravity="left"
+                android:textSize="45px"
+                android:textColor="@color/colorpalet5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:id="@+id/crop_coordinates_history"
+                android:layout_below="@+id/crop_name_history"
+                android:text="@string/coordinates"
+                android:layout_marginTop="5dp"
+                android:textSize="20px"
+                android:textColor="@color/colorpalet5">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:layout_centerVertical="true"
+                android:id="@+id/crop_coordinates_history_txt"
+                android:layout_below="@+id/crop_name_history"
+                android:layout_toRightOf="@id/crop_coordinates_history"
+                android:text="13.0521354, 35.654521"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:textSize="15px"
+                android:textColor="@color/container4">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:id="@+id/crop_dateandtime_history"
+                android:layout_below="@+id/crop_coordinates_history"
+                android:text="@string/uploaded_on"
+                android:layout_marginTop="5dp"
+                android:textSize="20px"
+                android:textColor="@color/colorpalet5">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:id="@+id/crop_dateandtime_history_txt"
+                android:layout_below="@+id/crop_coordinates_history"
+                android:layout_toRightOf="@id/crop_dateandtime_history"
+                android:text="24/10/2020 12:25:00"
+                android:layout_marginTop="6dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textSize="15px"
+                android:textColor="@color/container4">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:id="@+id/crop_cropid_history"
+                android:layout_below="@+id/crop_dateandtime_history"
+                android:text="@string/crop_id"
+                android:layout_marginTop="5dp"
+                android:textSize="20px"
+                android:textColor="@color/colorpalet5">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20px"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:layout_centerVertical="true"
+                android:id="@+id/crop_cropid_history_txt"
+                android:layout_below="@+id/crop_dateandtime_history"
+                android:layout_toRightOf="@id/crop_cropid_history"
+                android:text="SDFSDFD1SDF"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:textSize="15px"
+                android:textColor="@color/container4">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:layout_centerHorizontal="true"
+                android:letterSpacing="0.1"
+                android:layout_below="@+id/crop_cropid_history"
+                android:text="@string/click_for_more_info"
+                android:layout_marginTop="10dp"
+                android:id="@+id/clickfor"
+
+                android:gravity="center"
+                android:textSize="20px"
+                android:textColor="@color/colorpalet5">
+
+            </TextView>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/clickfor"
+                android:layout_below="@+id/crop_cropid_history"
+                android:src="@drawable/arrows"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="20dp">
+
+            </ImageView>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".cropComplete">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/history_crop_image"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/corn_crop">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="-150dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:onClick="downloadDetails"
+                android:layout_margin="20dp"
+                android:background="@drawable/crop_design"
+
+                android:src="@drawable/download">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_margin="20dp"
+                android:onClick="shareDetails"
+                android:background="@drawable/crop_design"
+
+                android:src="@drawable/share">
+
+            </ImageView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/cropdetail_design"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_details"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="27dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/history_crop_name"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/bg_receiver"
+                android:text="@string/wheat"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_id"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/history_crop_id"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/bg_receiver"
+                android:text="JHKHjjhb1"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:layout_margin="10dp"
+
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:focusable="false"
+                android:id="@+id/history_crop_description"
+
+                android:background="@drawable/bg_receiver"
+                android:text="@string/description"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coordinates"
+
+                    android:textColor="@color/colorpalet5"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/history_crop_coordintes"
+                android:textAlignment="center"
+                android:background="@drawable/bg_receiver"
+                android:text="13.554121, 80.26543163"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/uploaded_on"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:id="@+id/history_crop_dateandtime"
+                android:background="@drawable/bg_receiver"
+                android:text="24/10/2020 12:25:30"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_age"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:id="@+id/history_crop_age"
+                android:background="@drawable/bg_receiver"
+                android:text="2 months"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

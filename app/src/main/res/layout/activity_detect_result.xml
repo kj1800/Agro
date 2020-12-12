@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".CropDetect.DetectResult">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/result_crop"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/corn_crop">
+
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="-50dp"
+            android:background="@drawable/cropdetail_design"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_details"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="27dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/bottom_crop_name"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/bg_receiver"
+                android:text="@string/wheat"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:layout_margin="10dp"
+
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:focusable="false"
+                android:id="@+id/description_text"
+
+                android:background="@drawable/bg_receiver"
+                android:hint="description"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coordinates"
+                    android:layout_centerVertical="true"
+
+                    android:textColor="@color/colorpalet5"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/selectloc"
+                    android:src="@drawable/select_map"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_location"
+                    android:textSize="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/selectloc"
+                    android:gravity="center"
+                    />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:id="@+id/coordintestext"
+                android:textAlignment="center"
+                android:background="@drawable/bg_receiver"
+                android:text="13.554121, 80.26543163"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_age"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/bg_receiver"
+                android:text="2 months"
+                android:textColor="@color/colorpalet5"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                android:gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:onClick="saveDetails"
+                android:layout_gravity="center"
+                android:textColor="@color/colorpalet1"
+                android:layout_margin="20dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:background="@drawable/button_design">
+
+            </Button>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
