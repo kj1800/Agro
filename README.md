@@ -14,11 +14,11 @@ We have made a streamlined sustainable supply chain management system which ensu
 
 The repo contains 3 folders:
  
- Selenium-python for whatsapp automation
+ 1)Selenium-python for whatsapp automation
   
- AR_app/sceneform for Augumented Reality
+ 2)AR_app/sceneform for Augumented Reality
   
- agro_markcus is the folder containing the project files for Wholesale distributors and consumers, App.
+ 3)agro_markcus is the folder containing the project files for Wholesale distributors and consumers, App.
   
   
 *DONT FORGET TO VISIT THE GOOGLE DRIVE AND THE VIDEO*
