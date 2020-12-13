@@ -1,0 +1,10 @@
+cotton
+jute
+wheat
+corn
+sugarcane
+tobacco
+tea
+sunflower
+rice
+bajra

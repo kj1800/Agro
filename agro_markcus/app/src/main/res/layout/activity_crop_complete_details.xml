@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CropDetails.crop_complete_details">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wheat"
+                android:id="@+id/crop_name_detail"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="30dp"
+                android:textSize="30dp">
+
+            </TextView>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/cropimg"
+                android:layout_below="@+id/crop_name_detail"
+                android:src="@drawable/wheat"
+                android:scaleType="centerCrop"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                >
+
+            </ImageView>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/soiltype"
+                android:layout_below="@+id/crop_name_detail"
+                android:layout_marginTop="40dp"
+                android:elevation="5dp"
+                android:background="@drawable/crop_design"
+                android:padding="5dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/soil">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/temperature"
+                android:padding="5dp"
+                android:elevation="5dp"
+
+                android:background="@drawable/crop_design"
+                android:layout_below="@+id/soiltype"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/temperature">
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/temperature"
+                android:id="@+id/places"
+                android:elevation="5dp"
+
+                android:padding="5dp"
+                android:background="@drawable/crop_design"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/globe">
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:background="@drawable/crop_design"
+                android:id="@+id/season"
+                android:elevation="5dp"
+
+
+                android:layout_below="@+id/places"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/climate">
+
+            </ImageView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:elevation="10dp"
+                android:layout_marginTop="100dp"
+                android:layout_below="@+id/cropimg"
+                android:background="@drawable/cropdetail_design"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#E4e4e4"
+                    android:text="Topic"
+                    android:textSize="25dp"
+                    android:id="@+id/topic"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/infotext"
+                    android:gravity="center"
+                    android:layout_below="@+id/topic"
+                    android:background="#E4e4e4"
+
+                    android:text="sgfihdgfihdvbdfkuhdvdfjhdvfkjhdvfjhdvfuhvadljfhvadjhfvajjhdfvjkadvfjhvjkhkjhvfjkhvjkhdvfkjhdvfjhvadjfhvjkadhfvjkhadvfj"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    >
+
+                </TextView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</LinearLayout>

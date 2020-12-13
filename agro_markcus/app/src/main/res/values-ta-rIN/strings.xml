@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agro</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">வணக்கம்</string>
+    <string name="username">கிருஷ்</string>
+    <string name="detect">கண்டறிதல்</string>
+    <string name="crop_details">பயிர் விவரங்கள்</string>
+    <string name="crop_search">பயிர் தேடல்</string>
+    <string name="find">கண்டுபிடி</string>
+    <string name="legal">சட்ட</string>
+    <string name="services">சேவைகள்</string>
+    <string name="register">பதிவு</string>
+    <string name="enter_email_id">மின்னஞ்சல் ஐடியை உள்ளிடவும்</string>
+    <string name="enter_password">கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="already_have_an_account_login">ஏற்கனவே ஒரு கணக்கு உள்ளதா? உள்நுழைய!</string>
+    <string name="login">உள்நுழைய</string>
+    <string name="forgot_password">கடவுச்சொல்லை மறந்துவிட்டீர்களா</string>
+    <string name="new_user_sign_up">புதிய பயனர்? பதிவுபெறு!</string>
+    <string name="wheat">கோதுமை</string>
+    <string name="crops">பயிர்கள்</string>
+    <string name="rice">அரிசி</string>
+    <string name="corn">சோளம்</string>
+    <string name="cotton">பருத்தி</string>
+    <string name="sunflower">சூரியகாந்தி</string>
+    <string name="jute">சணல்</string>
+    <string name="tea">தேநீர்</string>
+    <string name="tobacco">புகையிலை</string>
+    <string name="sugarcane">கரும்பு</string>
+    <string name="bajra">பஜ்ரா</string>
+
+    <string name="ar">ஏ.ஆர்</string>
+    <string name="live_prediction">நேரடி கணிப்பு</string>
+    <string name="coordinates">ஒருங்கிணைப்புகள் </string>
+    <string name="uploaded_on">பதிவேற்றப்பட்டது</string>
+    <string name="crop_id">பயிர் ஐடி</string>
+    <string name="click_for_more_info">மேலும் தகவலுக்கு கிளிக் செய்க</string>
+    <string name="crop">பயிர்</string>
+    <string name="location">இடம்</string>
+    <string name="uploaded_by">பதிவேற்றியது</string>
+    <string name="name">பெயர்</string>
+    <string name="emailid">மின்னஞ்சல் முகவரி</string>
+    <string name="phone_no">தொலைபேசி எண்</string>
+    <string name="accuracy">துல்லியம் </string>
+    <string name="crop_age">பயிர் வயது</string>
+    <string name="next">அடுத்தது</string>
+    <string name="enter_user_name">பயனர் பெயரை உள்ளிடவும்</string>
+    <string name="crop_history">பயிர் வரலாறு</string>
+    <string name="description">விளக்கம்</string>
+    <string name="save">சேமி</string>
+    <string name="select_location">இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="classify">வகைப்படுத்து</string>
+    <string name="choose_image">படத்தைத் தேர்வுசெய்க</string>
+    <string name="upload_history">வரலாற்றைப் பதிவேற்றுக</string>
+    <string name="find_your_crop">உங்கள் பயிர் கண்டுபிடிக்க</string>
+    <string name="explore_mother_nature_with_the_eye_of_technology">தொழில்நுட்பத்தின் கண்ணால் தாய் இயற்கையை ஆராயுங்கள்</string>
+    <string name="learn_about_crop">பயிர் பற்றி அறிக</string>
+    <string name="expand_the_knowledge_on_what_you_eat">நீங்கள் சாப்பிடுவது குறித்த அறிவை விரிவாக்குங்கள்</string>
+    <string name="fields_near_you">உங்களுக்கு அருகிலுள்ள புலங்கள்</string>
+    <string name="locate_our_farmer_who_provides_for_us">எங்களுக்கு வழங்கும் எங்கள் விவசாயியைக் கண்டுபிடி</string>
+    <string name="hello">வணக்கம்</string>
+    <string name="live_camera">நேரடி கேமரா</string>
+    <string name="gallery">கேலரி</string>
+
+
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="crop_names">
+    <item>@string/wheat</item>
+    <item>@string/cotton</item>
+
+    <item>@string/sunflower</item>
+    <item>@string/rice</item>
+    <item>@string/corn</item>
+        <item>@string/tea</item>
+        <item>@string/tobacco</item>
+        <item>@string/bajra</item>
+        <item>@string/jute</item>
+        <item>@string/sugarcane</item>
+    </string-array>
+</resources>

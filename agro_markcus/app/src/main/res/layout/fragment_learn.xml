@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/container4"
+
+    android:layout_height="match_parent"
+    tools:context=".Fragment.LearnFragment">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+     <androidx.cardview.widget.CardView
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         android:layout_margin="20dp"
+         android:id="@+id/profileimage"
+         app:cardCornerRadius="75dp">
+         <ImageView
+             android:layout_width="match_parent"
+             android:src="@drawable/agrologo"
+             android:layout_height="match_parent">
+
+         </ImageView>
+     </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Faheem Jinna"
+            android:textSize="25dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/profilename"
+            android:layout_toRightOf="@+id/profileimage"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:text="faheemjinna@gmail.com"
+            android:layout_below="@+id/profilename"
+            android:textSize="13dp"
+            android:id="@+id/profilemail"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/profileimage"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="left"
+            android:text="No:2, Periyar street, kannika..."
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/profilemail"
+            android:textSize="13dp"
+            android:drawableLeft="@drawable/location"
+            android:id="@+id/profileaddress"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/profileimage"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="3420"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:id="@+id/profilebusiness"
+            android:textStyle="bold"
+            android:layout_below="@+id/profileimage"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Total Orders"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:layout_below="@+id/profilebusiness"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/totalsalestext"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/profileimage"
+            app:cardCornerRadius="5dp"
+            android:layout_toRightOf="@+id/profileimage"
+            android:layout_marginLeft="50dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:src="@drawable/star_on"
+                    android:layout_height="20dp">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="3000 Points"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/totalsalestext"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cropdetail_design"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Order History"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                android:layout_margin="2dp"
+                app:contentPadding="2dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="120dp"
+                        android:id="@+id/crop_image_history1"
+                        android:elevation="4dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="2dp"
+
+                        android:src="@drawable/agrologo"
+                        android:layout_height="120dp">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lineartext1"
+                        android:gravity="left"
+                        android:layout_margin="5dp"
+                        android:layout_toRightOf="@id/crop_image_history1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/crop_name_history1"
+                            android:layout_marginLeft="10dp"
+                            android:text="Tomato"
+                            android:layout_gravity="left"
+                            android:textSize="45px"
+                            android:textColor="@color/colorpalet5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_coordinates_history1"
+                            android:layout_below="@+id/crop_name_history1"
+                            android:text="Total Purchase:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/crop_coordinates_history_txt1"
+                            android:layout_below="@+id/crop_name_history1"
+                            android:layout_toRightOf="@id/crop_coordinates_history1"
+                            android:text="$12345"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_dateandtime_history1"
+                            android:layout_below="@+id/crop_coordinates_history1"
+                            android:text="Purchased On:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_dateandtime_history_txt1"
+                            android:layout_below="@+id/crop_coordinates_history1"
+                            android:layout_toRightOf="@id/crop_dateandtime_history1"
+                            android:text="24/10/2020 12:25:00"
+                            android:layout_marginTop="6dp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_cropid_history1"
+                            android:layout_below="@+id/crop_dateandtime_history1"
+                            android:text="Order id:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/crop_cropid_history_txt1"
+                            android:layout_below="@+id/crop_dateandtime_history1"
+                            android:layout_toRightOf="@id/crop_cropid_history1"
+                            android:text="SDFSDFD1SDF"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerHorizontal="true"
+                            android:letterSpacing="0.1"
+                            android:layout_below="@+id/crop_cropid_history1"
+                            android:text="@string/click_for_more_info"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/clickfor1"
+
+                            android:gravity="center"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/clickfor1"
+                            android:layout_below="@+id/crop_cropid_history1"
+                            android:src="@drawable/arrows"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="20dp">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                android:layout_margin="2dp"
+                app:contentPadding="2dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="120dp"
+                        android:id="@+id/crop_image_history11"
+                        android:elevation="4dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="2dp"
+
+                        android:src="@drawable/agrologo"
+                        android:layout_height="120dp">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lineartext11"
+                        android:gravity="left"
+                        android:layout_margin="5dp"
+                        android:layout_toRightOf="@id/crop_image_history11"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/crop_name_history11"
+                            android:layout_marginLeft="10dp"
+                            android:text="Onion"
+                            android:layout_gravity="left"
+                            android:textSize="45px"
+                            android:textColor="@color/colorpalet5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_coordinates_history11"
+                            android:layout_below="@+id/crop_name_history11"
+                            android:text="Total Purchase:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/crop_coordinates_history_txt11"
+                            android:layout_below="@+id/crop_name_history11"
+                            android:layout_toRightOf="@id/crop_coordinates_history11"
+                            android:text="$12345"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_dateandtime_history11"
+                            android:layout_below="@+id/crop_coordinates_history11"
+                            android:text="Purchased On:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_dateandtime_history_txt11"
+                            android:layout_below="@+id/crop_coordinates_history11"
+                            android:layout_toRightOf="@id/crop_dateandtime_history11"
+                            android:text="24/10/2020 12:25:00"
+                            android:layout_marginTop="6dp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_cropid_history11"
+                            android:layout_below="@+id/crop_dateandtime_history11"
+                            android:text="Order id:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/crop_cropid_history_txt11"
+                            android:layout_below="@+id/crop_dateandtime_history11"
+                            android:layout_toRightOf="@id/crop_cropid_history11"
+                            android:text="SDFSDFD1SDF"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerHorizontal="true"
+                            android:letterSpacing="0.1"
+                            android:layout_below="@+id/crop_cropid_history11"
+                            android:text="@string/click_for_more_info"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/clickfor11"
+
+                            android:gravity="center"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/clickfor11"
+                            android:layout_below="@+id/crop_cropid_history11"
+                            android:src="@drawable/arrows"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="20dp">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                android:layout_margin="2dp"
+                app:contentPadding="2dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="120dp"
+                        android:id="@+id/crop_image_history12"
+                        android:elevation="4dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:padding="2dp"
+
+                        android:src="@drawable/agrologo"
+                        android:layout_height="120dp">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lineartext12"
+                        android:gravity="left"
+                        android:layout_margin="5dp"
+                        android:layout_toRightOf="@id/crop_image_history12"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/crop_name_history12"
+                            android:layout_marginLeft="10dp"
+                            android:text="Brinjal"
+                            android:layout_gravity="left"
+                            android:textSize="45px"
+                            android:textColor="@color/colorpalet5"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_coordinates_history12"
+                            android:layout_below="@+id/crop_name_history12"
+                            android:text="Total Purchase:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/crop_coordinates_history_txt12"
+                            android:layout_below="@+id/crop_name_history12"
+                            android:layout_toRightOf="@id/crop_coordinates_history12"
+                            android:text="$12345"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_dateandtime_history12"
+                            android:layout_below="@+id/crop_coordinates_history12"
+                            android:text="Purchased On:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_dateandtime_history_txt12"
+                            android:layout_below="@+id/crop_coordinates_history12"
+                            android:layout_toRightOf="@id/crop_dateandtime_history12"
+                            android:text="24/10/2020 12:25:00"
+                            android:layout_marginTop="6dp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:id="@+id/crop_cropid_history12"
+                            android:layout_below="@+id/crop_dateandtime_history12"
+                            android:text="Order id:"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/crop_cropid_history_txt12"
+                            android:layout_below="@+id/crop_dateandtime_history12"
+                            android:layout_toRightOf="@id/crop_cropid_history12"
+                            android:text="SDFSDFD1SDF"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:textSize="15px"
+                            android:textColor="@color/container4">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="left"
+                            android:layout_centerHorizontal="true"
+                            android:letterSpacing="0.1"
+                            android:layout_below="@+id/crop_cropid_history12"
+                            android:text="@string/click_for_more_info"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/clickfor12"
+
+                            android:gravity="center"
+                            android:textSize="20px"
+                            android:textColor="@color/colorpalet5">
+
+                        </TextView>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/clickfor12"
+                            android:layout_below="@+id/crop_cropid_history12"
+                            android:src="@drawable/arrows"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="20dp">
+
+                        </ImageView>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

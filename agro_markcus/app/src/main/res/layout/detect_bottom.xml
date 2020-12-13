@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/crop"
+        android:layout_width="49dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/crop"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wheat"
+        android:layout_margin="10dp"
+
+        android:textColor="@color/colorpalet3"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/crop"
+        android:id="@+id/croptext"
+       >
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accuracy"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/crop"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/accuracy"
+       >
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="99%"
+        android:layout_margin="10dp"
+
+        android:textColor="@color/colorpalet3"
+        android:layout_below="@+id/crop"
+
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/accuracy"
+        android:id="@+id/accuracytext"
+      >
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crop_age"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/accuracytext"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/age"
+       >
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2 months"
+        android:layout_margin="10dp"
+
+        android:textColor="@color/colorpalet3"
+        android:layout_below="@+id/accuracytext"
+
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/accuracy"
+        android:id="@+id/agetext"
+        >
+
+    </TextView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age"
+        android:layout_margin="30dp"
+        android:id="@+id/nextbut"
+        android:text="@string/next"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:letterSpacing="0.2"
+        android:background="@drawable/button_design">
+
+    </Button>
+
+
+
+
+
+</RelativeLayout>

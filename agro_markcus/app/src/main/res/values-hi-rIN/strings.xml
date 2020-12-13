@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agro</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">स्वागत हे!</string>
+    <string name="username">क्रिश</string>
+    <string name="detect">पता लगाना</string>
+    <string name="crop_details">फसल विवरण</string>
+    <string name="crop_search">फसल की खोज</string>
+    <string name="find">खोज</string>
+    <string name="legal">कानूनी</string>
+    <string name="services">सेवाएं</string>
+    <string name="register">रजिस्टर करें</string>
+    <string name="enter_email_id">ईमेल आईडी दर्ज करें</string>
+    <string name="enter_password">पास वर्ड दर्ज करें</string>
+    <string name="already_have_an_account_login">क्या आपके पास पहले से एक खाता मौजूद है? लॉग इन करें!</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="forgot_password">पासवर्ड भूल गए</string>
+    <string name="new_user_sign_up">नया उपयोगकर्ता? साइन अप करें!</string>
+    <string name="wheat">गेहूँ</string>
+    <string name="crops">फसलें</string>
+    <string name="rice">चावल</string>
+    <string name="corn">मक्का</string>
+    <string name="cotton">कपास</string>
+    <string name="sunflower">सूरजमुखी</string>
+    <string name="jute">जूट</string>
+    <string name="tea">चाय</string>
+    <string name="tobacco">तंबाकू</string>
+    <string name="sugarcane">गन्ना</string>
+    <string name="bajra">बाजरा</string>
+
+    <string name="ar">एआर</string>
+    <string name="live_prediction">लाइव भविष्यवाणी</string>
+    <string name="coordinates">निर्देशांक </string>
+    <string name="uploaded_on">पर अपलोड किया गया</string>
+    <string name="crop_id">फसल आईडी </string>
+    <string name="click_for_more_info">अधिक जानकारी के लिए क्लिक करें</string>
+    <string name="crop">काटना</string>
+    <string name="location">स्थान</string>
+    <string name="uploaded_by">द्वारा डाली गई</string>
+    <string name="name">नाम</string>
+    <string name="emailid">ईमेल आईडी</string>
+    <string name="phone_no">फोन नंबर</string>
+    <string name="accuracy">शुद्धता </string>
+    <string name="crop_age">फसल की आयु </string>
+    <string name="next">आगे</string>
+    <string name="enter_user_name">उपयोगकर्ता नाम दर्ज करें</string>
+    <string name="crop_history">फसल का इतिहास</string>
+    <string name="description">विवरण</string>
+    <string name="save">सहेजें</string>
+    <string name="select_location">स्थान चुनें</string>
+    <string name="classify">वर्गीकृत</string>
+    <string name="choose_image">छवि चुनें</string>
+    <string name="upload_history">इतिहास अपलोड करें</string>
+    <string name="find_your_crop">Find Your Crop</string>
+    <string name="explore_mother_nature_with_the_eye_of_technology">तकनीक की नज़र से माँ प्रकृति का अन्वेषण करें</string>
+    <string name="learn_about_crop">फसल के बारे में जानें</string>
+    <string name="expand_the_knowledge_on_what_you_eat">आप जो खाते हैं उस पर ज्ञान का विस्तार करें</string>
+    <string name="fields_near_you">आपके पास फील्ड्स</string>
+    <string name="locate_our_farmer_who_provides_for_us">हमारे लिए उपलब्ध कराने वाले किसान का पता लगाएँ</string>
+    <string name="hello">नमस्ते</string>
+    <string name="live_camera">लाइव कैमरा</string>
+    <string name="gallery">गेलरी</string>
+
+
+</resources>

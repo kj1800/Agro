@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "784736460282",
+    "firebase_url": "https://sceneform-dad88.firebaseio.com",
+    "project_id": "sceneform-dad88",
+    "storage_bucket": "sceneform-dad88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784736460282:android:fce2208cc5837118dc9843",
+        "android_client_info": {
+          "package_name": "uk.co.appoly.sceneform_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784736460282-fnq575masg4lfnbjmgkff8henq40ublv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uk.co.appoly.sceneform_example",
+            "certificate_hash": "a428fc923f42302f1000ca296d4b16918e4fa8ce"
+          }
+        },
+        {
+          "client_id": "784736460282-gh1gi488813j8mg92s71kg6f96sf883o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbVz3U_uQO22V5EEuS24iQa4PpIjBrCso"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784736460282-gh1gi488813j8mg92s71kg6f96sf883o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

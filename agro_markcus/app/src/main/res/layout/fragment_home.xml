@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#e4e4e4"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/toprelative"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            >
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:background="@drawable/searchdesign"
+                android:id="@+id/searchhome"
+                android:layout_toLeftOf="@+id/change_language"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+
+            </androidx.appcompat.widget.SearchView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/welcome"
+                android:text="@string/hello"
+                android:letterSpacing="0.05"
+                android:layout_below="@+id/searchhome"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorpalet5"
+                android:textSize="30dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+                android:typeface="sans">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your name"
+                android:id="@+id/displayname"
+                android:alpha="0.4"
+                android:layout_toRightOf="@+id/welcome"
+                android:layout_below="@+id/searchhome"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/colorpalet2"
+                android:textSize="30dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+
+                android:typeface="sans">
+
+            </TextView>
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/language"
+                android:id="@+id/change_language"
+                android:layout_alignParentRight="true"
+                android:layout_margin="20dp"
+
+                android:layout_height="30dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearhome"
+            android:layout_below="@+id/toprelative"
+            android:orientation="vertical">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alignmentMode="alignMargins"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:columnCount="1"
+                android:columnOrderPreserved="false"
+                android:rowCount="3"
+             >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:elevation="6dp"
+                    app:cardBackgroundColor="@color/container1"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:id="@+id/detectclick"
+                        android:orientation="horizontal"
+                        android:padding="0dp">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:text="@string/find_your_crop"
+                            android:id="@+id/findcorp"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_below="@+id/findcorp"
+                            android:layout_toLeftOf="@+id/detect"
+                            android:layout_marginLeft="12dp"
+                            android:text="@string/explore_mother_nature_with_the_eye_of_technology"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="15dp"
+                             />
+                        <ImageView
+                            android:id="@+id/detect"
+                            android:layout_margin="20dp"
+                            android:layout_width="100dp"
+                            android:layout_alignParentRight="true"
+
+                            android:layout_height="100dp"
+                            android:src="@drawable/detect"
+
+                            />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/container2"
+
+                    android:elevation="6dp"
+
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cropsearch"
+
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <ImageView
+                            android:id="@+id/details"
+                            android:layout_margin="20dp"
+                            android:layout_width="100dp"
+                            android:src="@drawable/cropdetails"
+
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                          />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="12dp"
+                            android:text="@string/learn_about_crop"
+                            android:id="@+id/learncorp"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_below="@+id/learncorp"
+                            android:layout_toRightOf="@+id/details"
+                            android:layout_marginRight="12dp"
+                            android:text="@string/expand_the_knowledge_on_what_you_eat"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="15dp"
+                            />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+
+                    android:elevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/container3"
+
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/findlinear"
+
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <ImageView
+
+                            android:layout_width="100dp"
+                            android:id="@+id/find"
+                            android:layout_margin="20dp"
+                            android:layout_gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/finder"
+                            android:layout_height="100dp"
+                           />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:text="@string/fields_near_you"
+                            android:id="@+id/findcorps"
+                            android:textSize="20dp"
+                            android:textColor="@android:color/white"
+
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_below="@+id/findcorps"
+                            android:layout_toLeftOf="@+id/find"
+                            android:layout_marginLeft="12dp"
+                            android:text="@string/locate_our_farmer_who_provides_for_us"
+                            android:textColor="@android:color/white"
+
+                            android:textSize="15dp"
+                            />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+            </GridLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_history"
+            android:layout_below="@+id/linearhome"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            android:id="@+id/uploadhistorytext"
+            android:typeface="sans"
+            android:textSize="30dp"
+
+            android:textColor="@color/colorpalet5"
+            android:layout_marginLeft="10dp"
+            >
+
+        </TextView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerhistoryuser"
+        android:layout_below="@+id/uploadhistorytext"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
