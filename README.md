@@ -13,9 +13,12 @@ We from Insignia Encorp propose a sustainable viable solution creating an online
 We have made a streamlined sustainable supply chain management system which ensures transparency in E-Commerece.
 
 The repo contains 3 folders:
-  Selenium-python for whatsapp automation
-  AR_app/sceneform for Augumented Reality
-  agro_markcus is the folder containing the project files for Wholesale distributors and consumers, App.
+ 
+ Selenium-python for whatsapp automation
+  
+ AR_app/sceneform for Augumented Reality
+  
+ agro_markcus is the folder containing the project files for Wholesale distributors and consumers, App.
   
   
 *DONT FORGET TO VISIT THE GOOGLE DRIVE AND THE VIDEO*
