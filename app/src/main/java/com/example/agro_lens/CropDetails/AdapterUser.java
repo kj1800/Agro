@@ -48,7 +48,7 @@ public class AdapterUser extends RecyclerView.Adapter<AdapterUser.MyHolder> impl
         holder.mNametv.setText(userName);
         holder.mEmailtv.setText(userEmail);
         try {
-            Picasso.get().load(userImage).placeholder(R.drawable.logobg).into(holder.mAvatartv);
+            Picasso.get().load(userImage).placeholder(R.drawable.agrologo).into(holder.mAvatartv);
 
         }
         catch (Exception e){

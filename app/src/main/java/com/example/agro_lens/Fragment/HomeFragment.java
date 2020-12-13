@@ -1,11 +1,17 @@
 package com.example.agro_lens.Fragment;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -14,26 +20,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.agro_lens.CropDetails.Crop_Details;
 import com.example.agro_lens.CropDetect.DetectCrop;
 import com.example.agro_lens.CropHistory.AdapterHistory;
 import com.example.agro_lens.CropHistory.Modelhistory;
-import com.example.agro_lens.CropHistory.cropHistory;
-import com.example.agro_lens.MainActivity;
 import com.example.agro_lens.Map.Map_locate;
 import com.example.agro_lens.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -43,7 +35,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -65,7 +56,7 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     AdapterHistory adapterHistory;
     List<Modelhistory> userlist;
-    SearchView searchView;
+SearchView searchView;
 
 
     @Override
@@ -86,6 +77,7 @@ public class HomeFragment extends Fragment {
         crop_detect=view.findViewById(R.id.detectclick);
 
         displayName=view.findViewById(R.id.displayname);
+
 
 
         crop_detect.setOnClickListener(new View.OnClickListener() {
@@ -169,6 +161,7 @@ public class HomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         userlist=new ArrayList<>();
+        adapterHistory=new AdapterHistory(getActivity(),userlist);
         getAllUsers();
         searchView=view.findViewById(R.id.searchhome);
         searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);

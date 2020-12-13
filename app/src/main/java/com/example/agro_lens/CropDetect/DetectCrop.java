@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -118,10 +119,34 @@ public class DetectCrop extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select Picture"),12);
+                final BottomSheetDialog bottomSheetDialog4=new BottomSheetDialog(DetectCrop.this,R.style.BottomSheetDialog);
+                bottomSheetDialog4.setContentView(R.layout.bottom_sheet_dialog);
+                CardView camera=bottomSheetDialog4.findViewById(R.id.cardcamera);
+                CardView gallery=bottomSheetDialog4.findViewById(R.id.cardgallery);
+                camera.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.example.android.tflitecamerademo");
+                        if (launchIntent != null) {
+                            startActivity(launchIntent);//null pointer check in case package name was not found
+                            bottomSheetDialog4.dismiss();
+                        }
+                    }
+                });
+                gallery.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        startActivityForResult(Intent.createChooser(intent,"Select Picture"),12);
+                        bottomSheetDialog4.dismiss();
+
+                    }
+                });
+                bottomSheetDialog4.setCanceledOnTouchOutside(true);
+                bottomSheetDialog4.show();
+
             }
         });
 
@@ -135,26 +160,58 @@ public class DetectCrop extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View v) {
+                if (imageuri!=null){
+                    int imageTensorIndex = 0;
+                    int[] imageShape = tflite.getInputTensor(imageTensorIndex).shape(); // {1, height, width, 3}
+                    imageSizeY = imageShape[1];
+                    imageSizeX = imageShape[2];
+                    DataType imageDataType = tflite.getInputTensor(imageTensorIndex).dataType();
 
-                int imageTensorIndex = 0;
-                int[] imageShape = tflite.getInputTensor(imageTensorIndex).shape(); // {1, height, width, 3}
-                imageSizeY = imageShape[1];
-                imageSizeX = imageShape[2];
-                DataType imageDataType = tflite.getInputTensor(imageTensorIndex).dataType();
+                    int probabilityTensorIndex = 0;
+                    int[] probabilityShape =
+                            tflite.getOutputTensor(probabilityTensorIndex).shape(); // {1, NUM_CLASSES}
+                    DataType probabilityDataType = tflite.getOutputTensor(probabilityTensorIndex).dataType();
 
-                int probabilityTensorIndex = 0;
-                int[] probabilityShape =
-                        tflite.getOutputTensor(probabilityTensorIndex).shape(); // {1, NUM_CLASSES}
-                DataType probabilityDataType = tflite.getOutputTensor(probabilityTensorIndex).dataType();
+                    inputImageBuffer = new TensorImage(imageDataType);
+                    outputProbabilityBuffer = TensorBuffer.createFixedSize(probabilityShape, probabilityDataType);
+                    probabilityProcessor = new TensorProcessor.Builder().add(getPostprocessNormalizeOp()).build();
 
-                inputImageBuffer = new TensorImage(imageDataType);
-                outputProbabilityBuffer = TensorBuffer.createFixedSize(probabilityShape, probabilityDataType);
-                probabilityProcessor = new TensorProcessor.Builder().add(getPostprocessNormalizeOp()).build();
+                    inputImageBuffer = loadImage(bitmap);
 
-                inputImageBuffer = loadImage(bitmap);
+                    tflite.run(inputImageBuffer.getBuffer(),outputProbabilityBuffer.getBuffer().rewind());
+                    showresult();
+                }
+                else {
+                    final BottomSheetDialog bottomSheetDialog4=new BottomSheetDialog(DetectCrop.this,R.style.BottomSheetDialog);
+                    bottomSheetDialog4.setContentView(R.layout.bottom_sheet_dialog);
+                    CardView camera=bottomSheetDialog4.findViewById(R.id.cardcamera);
+                    CardView gallery=bottomSheetDialog4.findViewById(R.id.cardgallery);
+                    camera.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.example.android.tflitecamerademo");
+                            if (launchIntent != null) {
+                                startActivity(launchIntent);//null pointer check in case package name was not found
+                                bottomSheetDialog4.dismiss();
+                            }
+                        }
+                    });
+                    gallery.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent=new Intent();
+                            intent.setType("image/*");
+                            intent.setAction(Intent.ACTION_GET_CONTENT);
+                            startActivityForResult(Intent.createChooser(intent,"Select Picture"),12);
+                            bottomSheetDialog4.dismiss();
 
-                tflite.run(inputImageBuffer.getBuffer(),outputProbabilityBuffer.getBuffer().rewind());
-                showresult();
+                        }
+                    });
+                    bottomSheetDialog4.setCanceledOnTouchOutside(true);
+                    bottomSheetDialog4.show();
+                }
+
+
             }
         });
 

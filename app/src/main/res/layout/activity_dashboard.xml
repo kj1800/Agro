@@ -24,7 +24,7 @@
         app:mbn_selectedIconColor="@android:color/white"
         app:mbn_circleColor="@color/container4"
         app:mbn_shadowColor="#979797"
-        android:background="@android:color/transparent"
+        android:background="#e4e4e4"
         android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

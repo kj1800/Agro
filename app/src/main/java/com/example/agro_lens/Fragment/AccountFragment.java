@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.provider.MediaStore;
 import android.text.TextUtils;
@@ -29,7 +31,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.agro_lens.CropHistory.AdapterHistory;
+import com.example.agro_lens.CropHistory.Modelhistory;
+import com.example.agro_lens.CropHistory.cropHistory;
 import com.example.agro_lens.R;
+import com.example.agro_lens.coursevideo.AdapterVideo;
+import com.example.agro_lens.coursevideo.ModelVideo;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -47,7 +54,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -74,6 +83,10 @@ public class AccountFragment extends Fragment {
 
     StorageReference storageReference;
     String storagepath="Users_Profile_Cover_Imgs/";
+
+    List<ModelVideo> modelVideos,modelVideoList;
+    AdapterVideo adapterVideo;
+    RecyclerView recyclerView,recyclerViewlatest;
 
 
 
@@ -103,6 +116,25 @@ public class AccountFragment extends Fragment {
                 showEditProfileDialog();
             }
         });
+
+        modelVideos=new ArrayList<>();
+        recyclerView=view.findViewById(R.id.learncourse);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity());
+        linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        modelVideoList=new ArrayList<>();
+        LinearLayoutManager linearLayoutManager1=new LinearLayoutManager(getActivity());
+        linearLayoutManager1.setOrientation(RecyclerView.HORIZONTAL);
+
+        recyclerViewlatest=view.findViewById(R.id.latestvideo);
+        recyclerViewlatest.setHasFixedSize(true);
+        recyclerViewlatest.setLayoutManager(linearLayoutManager1);
+
+
+getlatestlinks();
+        getlinks();
 
 
         reference.child(firebaseUser.getUid()).child("userdetails").addValueEventListener(new ValueEventListener() {
@@ -145,6 +177,48 @@ public class AccountFragment extends Fragment {
 
         return view;
     }
+
+    private void getlatestlinks() {
+        DatabaseReference reference1=FirebaseDatabase.getInstance().getReference("news");
+        reference1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    ModelVideo modelhistory=dataSnapshot.getValue(ModelVideo.class);
+                    modelVideoList.add(modelhistory);
+                    adapterVideo=new AdapterVideo(getActivity(),modelVideoList);
+                    recyclerViewlatest.setAdapter(adapterVideo);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void getlinks() {
+
+        DatabaseReference reference1=FirebaseDatabase.getInstance().getReference("links");
+        reference1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    ModelVideo modelhistory=dataSnapshot.getValue(ModelVideo.class);
+                    modelVideos.add(modelhistory);
+                    adapterVideo=new AdapterVideo(getActivity(),modelVideos);
+                    recyclerView.setAdapter(adapterVideo);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
     private boolean checkStoragePermission(){
         boolean result= ContextCompat.checkSelfPermission(getActivity(),Manifest.permission.WRITE_EXTERNAL_STORAGE) == (PackageManager.PERMISSION_GRANTED);
         return result;

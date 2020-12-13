@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e4e4e4"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.CameraFragment">
 
@@ -99,23 +100,19 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/shop_category_container"
+                android:orientation="horizontal"
                 android:layout_below="@+id/cat"
                 android:id="@+id/shop_category_recycler"/>
-            <androidx.viewpager2.widget.ViewPager2
-                android:layout_width="match_parent"
-                android:id="@+id/shopbannercontainer"
-                android:layout_below="@+id/shop_category_recycler"
-                android:layout_height="wrap_content">
 
-            </androidx.viewpager2.widget.ViewPager2>
             <TextView
                 android:layout_width="wrap_content"
-                android:text="@string/for_you"
+                android:text="For You"
                 android:id="@+id/category"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:textColor="@android:color/black"
-                android:layout_below="@+id/shopbannercontainer"
+                android:layout_below="@+id/shop_category_recycler"
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"/>
             <androidx.appcompat.widget.SearchView
@@ -127,7 +124,7 @@
                 app:searchIcon="@drawable/search"
                 app:queryHint="search"
 
-                android:background="@drawable/people_search_gradient"
+                android:background="@drawable/searchdesign"
 
                 android:layout_height="wrap_content"/>
 
@@ -135,6 +132,9 @@
                 android:layout_width="match_parent"
                 android:layout_below="@+id/shopsearch"
                 android:id="@+id/productlistcontainer"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:orientation="vertical"
+                tools:listitem="@layout/product_container"
                 android:layout_height="wrap_content"/>
 
 

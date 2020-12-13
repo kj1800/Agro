@@ -65,7 +65,7 @@ public class crop_complete_details extends AppCompatActivity {
                 Crop_name.setText(cropName);
 
                 try {
-                    Picasso.get().load(CropImageurl).placeholder(R.drawable.logo).into(crop_image);
+                    Picasso.get().load(CropImageurl).placeholder(R.drawable.agrologo).into(crop_image);
 
                 }
                 catch (Exception e){

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="#e4e4e4"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/productimage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/agrologo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/productdesign"
+                android:layout_above="@+id/cartrelative"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Product Name"
+                    android:id="@+id/productname"
+                    android:textColor="@android:color/white"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="10% off"
+                    android:layout_below="@+id/productname"
+                    android:textSize="8dp"
+                    android:padding="4dp"
+                    android:id="@+id/productofferpercentage"
+                    android:background="@drawable/offer_card"
+                    android:textColor="#029515"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@+id/productofferpercentage"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/quan"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/quantityss"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/quan"
+                        android:id="@+id/productquantity"
+                        android:textColor="@android:color/white"
+
+                        android:text="250 gm"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/logocolor"
+                android:id="@+id/cartrelative"
+                android:layout_below="@+id/productimage"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/productdiscountrate"
+                    android:text="$350"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_toRightOf="@+id/productdiscountrate"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/productoriginalrate"
+                    android:layout_centerVertical="true"
+                    android:text="$350"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/cart"
+                    android:background="@drawable/productcarddesign"
+                    android:padding="5dp"
+                    android:id="@+id/productaddtocart"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/ripleeffect"
+                android:id="@+id/favouritebutton"
+                android:src="@drawable/heart_off"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
