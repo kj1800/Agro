@@ -24,7 +24,7 @@ android:gravity="center"
                 android:layout_height="40dp"/>
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Live Camera"
+                android:text="@string/live_camera"
                 android:textStyle="bold"
                 android:textSize="15dp"
                 android:layout_marginTop="5dp"
@@ -58,7 +58,7 @@ android:gravity="center"
                 android:layout_height="50dp"/>
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Gallery"
+                android:text="@string/gallery"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:textSize="15dp"

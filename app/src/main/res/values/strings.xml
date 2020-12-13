@@ -51,6 +51,15 @@
     <string name="classify">Classify</string>
     <string name="choose_image">Choose Image</string>
     <string name="upload_history">Upload History</string>
+    <string name="find_your_crop">Find Your Crop</string>
+    <string name="explore_mother_nature_with_the_eye_of_technology">Explore Mother Nature with the eye of technology</string>
+    <string name="learn_about_crop">Learn About Crop</string>
+    <string name="expand_the_knowledge_on_what_you_eat">Expand the knowledge on what you eat</string>
+    <string name="fields_near_you">Fields near you</string>
+    <string name="locate_our_farmer_who_provides_for_us">Locate our Farmer who provides for us</string>
+    <string name="hello">Hello</string>
+    <string name="live_camera">Live Camera</string>
+    <string name="gallery">Gallery</string>
 
 
 </resources>

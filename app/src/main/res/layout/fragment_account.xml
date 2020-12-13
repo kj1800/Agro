@@ -14,92 +14,6 @@
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="match_parent">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="fitXY"
-                    android:id="@+id/user_profile"
-                    android:background="@color/colorPrimary">
-
-
-                </ImageView>
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="120dp"
-                    android:layout_below="@+id/user_profile"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="-60dp"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/profilepic"
-                    android:src="@drawable/logobg"
-
-
-                    android:layout_height="120dp"
-                    android:layout_marginLeft="10dp">
-
-                </de.hdodenhof.circleimageview.CircleImageView>
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/fab"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/edit"
-                    android:layout_margin="20dp">
-
-                </com.google.android.material.floatingactionbutton.FloatingActionButton>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp"
-
-                    android:layout_toRightOf="@+id/profilepic"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/user_name"
-                        android:layout_margin="5dp"
-                        android:textAlignment="center"
-                        android:text="your name"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="15dp"
-                        android:gravity="center_horizontal" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/user_emailid"
-                        android:layout_marginLeft="5dp"
-                        android:text="your email id"
-                        android:textColor="@android:color/white"
-                        android:textStyle="italic"
-                        android:textSize="15dp"
-                        android:gravity="center_horizontal" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/user_phoneno"
-                        android:layout_marginLeft="5dp"
-
-                        android:text="your phone number"
-                        android:textColor="@android:color/white"
-                        android:textStyle="italic"
-                        android:textSize="15dp"
-                        android:gravity="center_horizontal" />
-
-
-                </LinearLayout>
-
-            </RelativeLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:text="Learn"
@@ -134,6 +48,26 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/latestvideo"
+                android:nestedScrollingEnabled="false"
+
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="For You"
+                android:drawableEnd="@drawable/arrow"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/latestnews"
                 android:nestedScrollingEnabled="false"
 
                 android:layout_height="wrap_content">

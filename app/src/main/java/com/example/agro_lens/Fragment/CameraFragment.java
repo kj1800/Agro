@@ -5,6 +5,9 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -43,6 +46,7 @@ public class CameraFragment extends Fragment {
 
     List<ModelProduct> modelProducts;
     AdapterProduct adapterProduct;
+    WebView webView;
 
 
 
@@ -61,7 +65,11 @@ public class CameraFragment extends Fragment {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
         shoprecycler.setLayoutManager(linearLayoutManager);
-
+webView=view.findViewById(R.id.webviewdata);
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://agmarknet.gov.in/agnew/namticker.aspx");
 
 
 

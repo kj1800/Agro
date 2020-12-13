@@ -52,7 +52,15 @@
     <string name="classify">वर्गीकृत</string>
     <string name="choose_image">छवि चुनें</string>
     <string name="upload_history">इतिहास अपलोड करें</string>
-
+    <string name="find_your_crop">Find Your Crop</string>
+    <string name="explore_mother_nature_with_the_eye_of_technology">तकनीक की नज़र से माँ प्रकृति का अन्वेषण करें</string>
+    <string name="learn_about_crop">फसल के बारे में जानें</string>
+    <string name="expand_the_knowledge_on_what_you_eat">आप जो खाते हैं उस पर ज्ञान का विस्तार करें</string>
+    <string name="fields_near_you">आपके पास फील्ड्स</string>
+    <string name="locate_our_farmer_who_provides_for_us">हमारे लिए उपलब्ध कराने वाले किसान का पता लगाएँ</string>
+    <string name="hello">नमस्ते</string>
+    <string name="live_camera">लाइव कैमरा</string>
+    <string name="gallery">गेलरी</string>
 
 
 </resources>

@@ -35,6 +35,7 @@ import com.example.agro_lens.CropHistory.AdapterHistory;
 import com.example.agro_lens.CropHistory.Modelhistory;
 import com.example.agro_lens.CropHistory.cropHistory;
 import com.example.agro_lens.R;
+import com.example.agro_lens.coursevideo.AdapterNews;
 import com.example.agro_lens.coursevideo.AdapterVideo;
 import com.example.agro_lens.coursevideo.ModelVideo;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -66,9 +67,7 @@ public class AccountFragment extends Fragment {
     FirebaseUser firebaseUser;
     FirebaseDatabase database;
     DatabaseReference reference;
-    ImageView profileimage,coverphoto;
-    TextView nametest,mailtext,phonetext;
-    FloatingActionButton fab;
+
     ProgressDialog pd;
     private static final int CAMERA_REQUEST_CODE=100;
     private static final int STORAGE_REQUEST_CODE=200;
@@ -84,9 +83,11 @@ public class AccountFragment extends Fragment {
     StorageReference storageReference;
     String storagepath="Users_Profile_Cover_Imgs/";
 
-    List<ModelVideo> modelVideos,modelVideoList;
+    List<ModelVideo> modelVideos,modelVideoList,modelVideossadsd;
     AdapterVideo adapterVideo;
-    RecyclerView recyclerView,recyclerViewlatest;
+    RecyclerView recyclerView,recyclerViewlatest,recyclerViewnews;
+
+    AdapterNews adapterNews;
 
 
 
@@ -100,22 +101,12 @@ public class AccountFragment extends Fragment {
         database=FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
         reference=database.getReference("Users");
-        profileimage=view.findViewById(R.id.profilepic);
-        nametest=view.findViewById(R.id.user_name);
-        mailtext=view.findViewById(R.id.user_emailid);
-        phonetext=view.findViewById(R.id.user_phoneno);
-        coverphoto=view.findViewById(R.id.user_profile);
+
         cameraPermission=new String[]{Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermisssion=new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storageReference= FirebaseStorage.getInstance().getReference();
         pd=new ProgressDialog(getActivity());
-        fab=view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showEditProfileDialog();
-            }
-        });
+
 
         modelVideos=new ArrayList<>();
         recyclerView=view.findViewById(R.id.learncourse);
@@ -133,49 +124,43 @@ public class AccountFragment extends Fragment {
         recyclerViewlatest.setLayoutManager(linearLayoutManager1);
 
 
+
+        modelVideossadsd=new ArrayList<>();
+        recyclerViewnews=view.findViewById(R.id.latestnews);
+        recyclerViewnews.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager2=new LinearLayoutManager(getActivity());
+        linearLayoutManager2.setOrientation(RecyclerView.VERTICAL);
+        recyclerViewnews.setLayoutManager(linearLayoutManager2);
+
+
 getlatestlinks();
         getlinks();
+        getnewsLinks();
 
 
-        reference.child(firebaseUser.getUid()).child("userdetails").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot ds) {
-                    String name=""+ds.child("name").getValue();
-                    String mail=""+ds.child("email").getValue();
-                    String phone=""+ds.child("phone").getValue();
-                    String image=""+ds.child("image").getValue();
-                    String cover=""+ds.child("cover").getValue();
-                    nametest.setText(name);
-                    mailtext.setText(mail);
-                    phonetext.setText(phone);
-
-                    try {
-                        Picasso.get().load(image).into(profileimage);
-
-                    }
-                    catch (Exception e){
-                        Picasso.get().load(R.drawable.logobg).into(profileimage);
-
-                    }
-                    try {
-                        Picasso.get().load(cover).into(coverphoto);
-
-                    }
-                    catch (Exception e){
-
-
-                    }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
 
         return view;
+    }
+
+    private void getnewsLinks() {
+        DatabaseReference reference1=FirebaseDatabase.getInstance().getReference("newsimage");
+        reference1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    ModelVideo modelhistory=dataSnapshot.getValue(ModelVideo.class);
+                    modelVideossadsd.add(modelhistory);
+                    adapterNews=new AdapterNews(getActivity(),modelVideossadsd);
+                    recyclerViewnews.setAdapter(adapterNews);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void getlatestlinks() {

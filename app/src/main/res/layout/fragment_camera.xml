@@ -15,10 +15,19 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/webviewdata"
+                android:layout_height="60dp">
+
+            </WebView>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
+                android:layout_below="@+id/webviewdata"
                 android:id="@+id/shopiconcontainer"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content">
                 <LinearLayout
                     android:layout_width="match_parent"

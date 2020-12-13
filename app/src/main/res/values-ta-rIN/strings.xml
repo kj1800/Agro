@@ -52,7 +52,15 @@
     <string name="classify">வகைப்படுத்து</string>
     <string name="choose_image">படத்தைத் தேர்வுசெய்க</string>
     <string name="upload_history">வரலாற்றைப் பதிவேற்றுக</string>
-
+    <string name="find_your_crop">உங்கள் பயிர் கண்டுபிடிக்க</string>
+    <string name="explore_mother_nature_with_the_eye_of_technology">தொழில்நுட்பத்தின் கண்ணால் தாய் இயற்கையை ஆராயுங்கள்</string>
+    <string name="learn_about_crop">பயிர் பற்றி அறிக</string>
+    <string name="expand_the_knowledge_on_what_you_eat">நீங்கள் சாப்பிடுவது குறித்த அறிவை விரிவாக்குங்கள்</string>
+    <string name="fields_near_you">உங்களுக்கு அருகிலுள்ள புலங்கள்</string>
+    <string name="locate_our_farmer_who_provides_for_us">எங்களுக்கு வழங்கும் எங்கள் விவசாயியைக் கண்டுபிடி</string>
+    <string name="hello">வணக்கம்</string>
+    <string name="live_camera">நேரடி கேமரா</string>
+    <string name="gallery">கேலரி</string>
 
 
 </resources>
