@@ -10,8 +10,15 @@ Farmers ACT 2020 Protest:-
 
 We from Insignia Encorp propose a sustainable viable solution creating an online platform for our farmers promoting their sales and aiding them boost their income and supporting India economy. We have proposed a PaaS enabling all farmers, shopkeepers and the consumer connect with each other solving the removal of middlemen and digitalizing agriculture.
 
-Removal of Middlemen(APMC) 
-Lack of farmer friendly Ecommerce
-No assured MSP(Minimum Selling Price)
+We have made a streamlined sustainable supply chain management system which ensures transparency in E-Commerece.
 
-We have made a streamlined sustainable supply chain management system which ensures transparency in E-Commerece
+The repo contains 3 folders:
+  Selenium-python for whatsapp automation
+  AR_app/sceneform for Augumented Reality
+  agro_markcus is the folder containing the project files for Wholesale distributors and consumers, App.
+  
+  
+*DONT FORGET TO VISIT THE GOOGLE DRIVE AND THE VIDEO*
+
+_https://www.youtube.com/watch?v=C33SoyGxlDc&feature=emb_title_
+_https://drive.google.com/file/d/1ZINveQvdpuAo7UVx5YAQZlXrlTRUQL8q/view?usp=drivesdk_
